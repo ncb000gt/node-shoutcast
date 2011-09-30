@@ -13,10 +13,25 @@ Whatever is worse than alpha, this is it. Don't use it yet unless you want to he
 Usage
 ============
 
-node shoutcast.js [mp3 directory]
+From the CLI
+
+`node shoutcast.js [mp3 directory]`
+
+From Code
+
+    var cast = require('shoutcast');
+    var station = cast.Station(conf);
+
+    http.createServer(function (req, res) {
+      first.connect(res, function() {
+        console.log("Stream ended?");
+      });
+    }).listen(7000);
+
+    station.start();
 
 
 License
 ============
 
-see LICENSE file
+MIT

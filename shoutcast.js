@@ -35,7 +35,7 @@ if (stats.isDirectory()) {
 
 http.createServer(
     function (req, res) {
-      first.connect(res, function() {
+      first.connect(req, res, function() {
         console.log("Stream ended?");
       });
     }).listen(7000);
@@ -44,15 +44,21 @@ first.start();
 setInterval(function() {
   var total = 0;
   var played = 0;
+  var connected = 0;
+  var connections = 0;
   
   var len = stations.length;
   for (var idx = 0; idx < len; idx++) {
     total += stations[idx].stats.bytesWritten;
     played += stations[idx].stats.numPlayed;
+    connected += stations[idx].stats.connected;
+    connections += stations[idx].stats.connections;
   }
 
   console.log('Total Bytes Written: ' + total);
   console.log('Total Tracks Played: ' + played);
+  console.log('Total Connected: ' + connected);
+  console.log('Total Connections: ' + connections);
 }, 20000);
 
 console.log('Server running at http://0.0.0.0:7000/');

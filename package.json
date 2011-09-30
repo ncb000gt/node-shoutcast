@@ -14,8 +14,7 @@
     "test": "make test"
   },
   "dependencies": {
-    "queuestream": ">=0.0.1",
-    "eventemitter2": ">=0.4.0"
+    "queuestream": ">=0.0.1"
   },
   "devDependencies": {
     "nodeunit": ">=0.5.4"
