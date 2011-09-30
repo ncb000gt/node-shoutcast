@@ -1,0 +1,23 @@
+{
+  "name": "shoutcast",
+  "version": "0.0.1",
+  "author": "Nick Campbell (http://github.com/ncb000gt)",
+  "description": "Shoutcast Streaming Server",
+  "keywords": ["music", "streaming music", "shoutcast", "streaming"],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ncb000gt/node-shoutcast.git"
+  },
+  "licenses": [{"type": "MIT"}],
+  "bugs": {"web" : "http://github.com/ncb000gt/node-shoutcast/issues"},
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "queuestream": ">=0.0.1",
+    "eventemitter2": ">=0.4.0"
+  },
+  "devDependencies": {
+    "nodeunit": ">=0.5.4"
+  }
+}
